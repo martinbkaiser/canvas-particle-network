@@ -1,4 +1,4 @@
-# Canvas Particle Network
+# Canvas Particle Network Optimized!
 
 [![NPM version](https://img.shields.io/npm/v/canvas-particle-network.svg)](https://www.npmjs.com/package/canvas-particle-network)
 [![Bower version](https://img.shields.io/bower/v/canvas-particle-network.svg)](https://github.com/julianlaval/canvas-particle-network)
