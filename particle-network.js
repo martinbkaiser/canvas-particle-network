@@ -31,7 +31,12 @@ function getRandomArbitrary(min, max) {
         this.canvas = parent.canvas;
         this.ctx = parent.ctx;
         this.particleColor = parent.options.particleColor;
-        this.refreshRateLimit = parent.options.refreshRateLimit; // refreshRateLimit added for optimization
+        if(parent.options.refreshRateLimit){
+           this.refreshRateLimit = parent.options.refreshRateLimit;
+         }else{
+            this.refreshRateLimit = 2;
+         }
+        // refreshRateLimit added for optimization
         this.x = Math.random() * this.canvas.width;
         this.y = Math.random() * this.canvas.height;
         window.scaler = 1;
@@ -245,7 +250,7 @@ function getRandomArbitrary(min, max) {
     this.opacityEase = 0.5;
     this.fadeSwitch = true;
     ParticleNetworkOptimized.prototype.update = function() {
-        if (slow_update == 2) { // Slow update refresh rate
+        if (slow_update == this.refreshRateLimit) { // Slow update refresh rate
             this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
             this.ctx.globalAlpha = 1;
 
