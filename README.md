@@ -92,6 +92,21 @@ Density of the particles. Actual amount depends on the canvas size, and is calcu
 
 Please note that the higher the density, the more computationally intensive / slower each animation step becomes!
 
+
+#### options.refreshRateLimit
+
+Type: `Number`  
+Default: 2 
+
+This will slow the refresh rate of the particle draw loop, optimizing the particles for less CPU use. If you lower the refresh time you can add more particle density.
+
+
+* 1 is normal refresh rate
+* 2 is half refresh rate
+* 3 is 33% refresh rate
+* 4 is 25% refresh rate
+
+
 ## Roadmap
 
 * Have a suggestion? Let me know!
